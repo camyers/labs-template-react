@@ -20,7 +20,7 @@ npm install
 cp .env.example .env.local
 ```
 
-Add your API key to `.env.local`, then:
+Fill in any values `.env.local` asks for, then:
 
 ```bash
 npm run dev
@@ -46,6 +46,7 @@ Delete this section in the new repo.
 2. Update `name` in `package.json` and the `<title>` in `index.html`.
 3. Update the year in `LICENSE`.
 4. Fill in the placeholders at the top of this README.
+5. Set the description, website, and topics on GitHub. They aren't copied from the template.
 
 ## License
 
