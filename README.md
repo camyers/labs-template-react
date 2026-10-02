@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# labs-[project-name]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[One sentence on what this project does and what it demonstrates.]
 
-Currently, two official plugins are available:
+[Demo video or screenshot]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Tutorial: [link to the blog post]
 
-## React Compiler
+## What it covers
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Concept or technique 1]
+- [Concept or technique 2]
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Requires Node 24 or newer.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm install
+cp .env.example .env.local
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Add your API key to `.env.local`, then:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm run dev
 ```
+
+## Scripts
+
+| Command                | What it does                                |
+| ---------------------- | ------------------------------------------- |
+| `npm run dev`          | Start the dev server                        |
+| `npm run build`        | Type-check and build for production         |
+| `npm run preview`      | Serve the production build locally          |
+| `npm test`             | Run Vitest (watch mode locally, once in CI) |
+| `npm run lint`         | Run ESLint                                  |
+| `npm run format`       | Format with Prettier                        |
+| `npm run format:check` | Check formatting without writing changes    |
+
+## Starting a new lab from this template
+
+Delete this section in the new repo.
+
+1. Click "Use this template" on GitHub and name the repo `labs-[project-name]`.
+2. Update `name` in `package.json` and the `<title>` in `index.html`.
+3. Update the year in `LICENSE`.
+4. Fill in the placeholders at the top of this README.
+
+## License
+
+MIT
